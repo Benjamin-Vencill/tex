@@ -1,0 +1,92 @@
+\documentclass{article}
+\begin{document}
+
+\centerline{\sc \large Exercises, Chapter 1}
+\centerline{\sc Casella, Berger 2nd Edition}
+\centerline{\small Benjamin Vencill, 2019}
+\vspace{1pc}
+
+
+\textbf{1.1} {
+For each of the following experiments, describe the sample space:
+    \begin{itemize}
+        \item[(a)] Toss a coin four times.
+        \item[(b)] Count the number of insect-damaged leaves on a plant.
+        \item[(c)] Measure the lifetime (in hours) of a particular brand of lightbulb.
+        \item[(d)] Record the weights of 10-day-old rats.
+        \item[(e)] Observe the proportion of defectives in a shipment of electronic components.
+    \end{itemize}
+}
+
+\textbf{Solution} {
+    \begin{itemize}
+        \item[(a)] The sample space is $S = \{aaaa\}$ where $a \ \epsilon \  \{ H, T \}$
+
+        \item[(b)] The sample space is $S = \{0, 1, 2 .... \}$
+
+        \item[(c)] The sample space is $S = [0, \infty)$
+
+        \item[(d)] The sample space is $S =(0, \infty)$. Suppose we know no rats 
+                    weigh more than 200 lbs. Then we could say $S = (0, 200]$
+        
+        \item[(e)] If $n$ is the number of components in the shipment, the $S = \{0/n, 1/n, ... n/n\}$
+
+    \end{itemize}
+
+}
+
+
+
+
+
+\textbf{1.6} {
+Two penies, one with probability $P(head) = u$ and one with $P(head) = w$ are to be tossed
+together independently Define:
+
+    \begin{itemize}
+        \item[] $p_0 = P(0 \ heads \ occur)$
+        \item[] $p_1 = P(1 \ head \ occurs)$
+        \item[] $p_2 = P(2 \ heads \ occur)$
+    \end{itemize}
+Can $u$ and $w$ be chosen such that $p_0 = p_1 = p_2$? Prove your answer.
+}
+\vspace{1pc}
+
+\textbf{Solution:} {
+Start by computing the probability of each of $p_0$, $p_1$, and $p_2$ in terms of $u$ and $w$:
+   
+    \begin{itemize}
+        \item[] $p_0 = (1-u)(1-w)$ = $1 - u - w - uw$
+        \item[] $p_1 = u(1-w) + (1-u)(w)$ = $u + w - 2uw$
+        \item[] $p_2 = uw$
+    \end{itemize}
+
+A solution to this set of equations subject to the constrain $p_0 = p_1 = p_2$ has no real solutions:
+
+The system:
+    \begin{itemize}
+        \item[(1.6.1)] $1 - u - w + uw = a$
+        \item[(1.6.2)] $u + w - 2uw  = a$
+        \item[(1.6.3)] $uw = a$
+    \end{itemize}
+Yeilds the solution $3a = 1$ or $a = 1/3$. Then
+    \begin{itemize}
+        \item[] $1 - u - w + uw = \frac{1}{3}$
+        \item[(1.6.4)] $ u = \frac{\frac{4}{3} - w}{(1-w)}$
+    \end{itemize}
+Combining (1.6.3) and (1.6.4), we get
+    \begin{itemize}
+        \item[] $w = \frac{1}{3u}$
+        \item[] $w = \frac{1}{3\big(\frac{(\frac{4}{3}-w)}{(1-w)}\big)} $
+        \item[] $3w^2 + 4w + 1 = 0 $, $(3w+1)(w+1) = 0$, $w = -1, w =-\frac{1}{3}$
+    \end{itemize}
+Similarly solving for $u$, we get:
+    \begin{itemize}
+        \item[] $u = \frac{1}{3}w$, $u = -\frac{1}{3}, u = -\frac{1}{9}$ 
+    \end{itemize}
+Thus no solution of $u, w$ produces a valid probability.
+
+}
+
+
+\end{document}
